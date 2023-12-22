@@ -2,7 +2,7 @@ import pandas as pd
 from scipy.stats import chi2_contingency
 
 # завантажити дані з csv-файлу
-data = pd.read_csv("Максим Андреєв - grants.csv", encoding='cp1251', sep=";")
+data = pd.read_csv("grants.csv", encoding='cp1251', sep=";")
 
 # побудувати контингенційну таблицю
 cont_table1 = pd.crosstab(data.field, data.status)

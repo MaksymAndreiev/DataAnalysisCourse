@@ -2,7 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('Максим Андреєв - LungCapData.csv')
+df = pd.read_csv('LungCapData.csv')
 
 corr = df.corr(numeric_only=True)
 print(corr)
