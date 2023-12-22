@@ -6,10 +6,10 @@ matplotlib.use('TkAgg')
 
 pd.set_option('display.float_format', lambda x: '%.2f' % x)
 
-read_file = pd.read_excel("Максим Андреєв - [Template] data_sell_eng.xlsx")
+read_file = pd.read_excel("data_sell_eng.xlsx")
 df1 = pd.DataFrame(read_file)
 
-read_file = pd.read_excel("Максим Андреєв - [Template] data_sell_eng_2.xlsx")
+read_file = pd.read_excel("data_sell_eng_2.xlsx")
 df = pd.DataFrame(read_file)
 
 df = df1.join(df.set_index('Number_Category'), on='Number_Category')
@@ -71,7 +71,7 @@ summary_df = pd.concat([q_mean.rename('Mean'), q_max.rename('Max'), q_min.rename
                         s_mode.rename('Mode'), s_median.rename('Median'), s_std.rename('STD')], axis=1)
 print('\n\n')
 print(summary_df)
-summary_df.to_csv(r'E:\Каразіна\Аналіз даних\pract1_\result.txt')
+summary_df.to_csv(r'..\pract2\result.txt')
 
 cm = matplotlib.colormaps.get_cmap('Set2')
 f1 = plt.figure()
